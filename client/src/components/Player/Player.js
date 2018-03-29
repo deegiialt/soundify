@@ -1,0 +1,35 @@
+import React from "react";
+import "./Player.css";
+import ReactPlayer from 'react-player';
+
+const Player = props => (
+	<div>
+	<div className="row">
+		<div className="col-md-12">
+			<div className="player-container">
+			  <div className="square">
+				<img className="cd" src="https://www.dropbox.com/s/q79oj13hkztaoj2/cd.png?raw=1" /> 
+			    <p className="title"> Example {props.title} </p> 
+			    <p className="sub"> Example {props.sub} </p>
+			    <div className="run"></div>
+			    <div className="play"></div>
+			    <div className="playbtn"><a href="https://open.spotify.com/track/7H1wARAg328EuyIQxhVlXb" target="_blank"><img className="pause" src="https://www.dropbox.com/s/ozu8vunv3da8zfg/play%20btn.png?raw=1" /></a></div>
+			    <div className="forward"><img className="ff" src="https://www.dropbox.com/s/sb2nkjffzkjmnqx/forward.png?raw=1" /></div>
+			    <div className="back"><img className="ff" src="https://www.dropbox.com/s/elkr56m7av551am/back.png?raw=1" /></div>
+			    <p className="time">2:31</p>
+			    <p className="end">-0:43</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div className="row soundcloud-row">
+		<div className="col-md-12">
+			<ReactPlayer 
+				url="https://soundcloud.com/jaykode/shelter-jaykode-remix"
+				height="150px"
+			/>
+		</div>
+	</div>
+	</div>
+);
+export default Player;
