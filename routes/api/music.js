@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const booksController = require("../../controllers/booksController");
-// Matches with "/api/books"
+const musicController = require("../../controllers/musicController");
+
 router.route("/")
-  .get(booksController.findAll)
-  .post(booksController.create);
-// Matches with "/api/books/:id"
+  .get(musicController.findAll)
+  .post(musicController.create);
+
 router
   .route("/:id")
   .get(booksController.findById)

@@ -1,8 +1,26 @@
 import React from "react";
 import "./Nav.css";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Link } from "react-router-dom";
 
-const Nav = props => (
-	<div>
+class Nav extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.toggle = this.toggle.bind(this);
+		this.state = {
+		  dropdownOpen: false
+		};
+	}
+
+	toggle() {
+		this.setState({
+		  dropdownOpen: !this.state.dropdownOpen
+		});
+	}
+
+	render() {
+		return(
 		<div>
 			<div className="search-container">
 				<div className="search-box">
@@ -10,18 +28,19 @@ const Nav = props => (
 					<span></span>
 				</div>
 			</div>
-			<div className="dropdown">
-				<div className="profile-icon btn glyphicon glyphicon-user dropdown-toggle type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'">
-					<div className='dropdown-menu'>
-						<span><img src="{props.profileImage}"/></span>
-						<span>Name</span>			
-					</div>
-				</div>
-			</div>					
-			<div className="profile-dropdown">
-
-			</div>
+			<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+            <DropdownToggle className="profile-icon btn glyphicon glyphicon-user" />
+              <DropdownMenu>
+                <img className="profileImage" src="example.com"/>
+                <div className="profileName">Name</div>
+                <div className="glyphicon glyphicon-heart icons btn" />
+                <div className="glyphicon glyphicon-plus icons btn" />
+                <div className="logout">Log out</div>   
+              </DropdownMenu>
+          	</Dropdown>
+			<Link to="/upload" className="glyphicon glyphicon-plus btn upload"></Link>
 		</div>
-	</div>
-);
+		)
+	}
+};
 export default Nav;

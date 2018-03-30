@@ -18,7 +18,15 @@ const Player = props => (
 			    <div className="back"><img className="ff" src="https://www.dropbox.com/s/elkr56m7av551am/back.png?raw=1" /></div>
 			    <p className="time">2:31</p>
 			    <p className="end">-0:43</p>
+			    <div className="buttonContainer">
+			    	<div className="glyphicon glyphicon-heart-empty icons btn" />
+			    	<div className="glyphicon glyphicon-retweet icons btn" />
+			    	<div className="glyphicon glyphicon-plus icons btn" />
+			    	<div className="glyphicon glyphicon-save icons btn" />
+
+			    </div>
 			  </div>
+
 			</div>
 		</div>
 	</div>

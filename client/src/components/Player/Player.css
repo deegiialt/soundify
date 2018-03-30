@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .square{
-  width: 480px;
-  
+  width: 750px;
 	height: 160px;
 	background: white;
   border-radius: 6px;
@@ -155,5 +154,16 @@
 /*Soundcloud*/
 
 .soundcloud-row {
-  padding-left: 30%;
+  padding-left: 22%;
+}
+
+/*======================================================*/
+/*Player buttons*/
+
+.buttonContainer {
+  float: right;
+}
+
+.icons {
+/*  padding: 12px;*/
 }
