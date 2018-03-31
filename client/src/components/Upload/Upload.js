@@ -2,6 +2,22 @@ import React from "react";
 import "./Upload.css";
 
 class Upload extends React.Component {
+	state = {
+		albumCover: "",
+		title: "",
+		artist: "",
+		file: "",
+		tags: "",
+		description: ""
+	};
+
+	componentDidMount() {
+		this.loadMusic();
+	}
+
+	loadMusic = () => {
+		
+	}
 
 	render() {
 		return(
@@ -12,7 +28,7 @@ class Upload extends React.Component {
 				    <div class="col-sm-6">
 				      <div class="input-block">
 				        <label for=""></label>
-				        <input type="text" class="form-control" placeholder="Album Cover"/>
+				        <input type="text" class="form-control" placeholder="Title" name=""/>
 				      </div>
 				    </div>
 				    <div class="col-sm-6">
