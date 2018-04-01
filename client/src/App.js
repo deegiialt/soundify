@@ -3,6 +3,8 @@ import './App.css';
 import Nav from "./components/Nav";
 import Player from "./components/Player";
 import Upload from "./components/Upload";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -11,9 +13,11 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <Route exact path="/" component={Nav} />
+          <Route exact path="/" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/main" component={Nav} />
           <Route exact path="/upload" component={Upload} />
-          <Route exact path="/" component={Player} />
+          <Route exact path="/main" component={Player} />
         </div> 
       </Router>
     );

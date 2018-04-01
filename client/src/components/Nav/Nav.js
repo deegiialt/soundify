@@ -31,11 +31,15 @@ class Nav extends React.Component {
 			<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle className="profile-icon btn glyphicon glyphicon-user" />
               <DropdownMenu>
-                <img className="profileImage" src="example.com"/>
-                <div className="profileName">Name</div>
-                <div className="glyphicon glyphicon-heart icons btn" />
-                <div className="glyphicon glyphicon-plus icons btn" />
-                <div className="logout">Log out</div>   
+              	<div className="profileHeader">
+	                <img className="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYWrNxlCkqHlLvtG1qSB2BxktAOIeoU3HY1Mv7Ku5HAZgWwe5Zg"/>
+	                <span className="profileName">Name</span>
+                </div>
+                <div className="profileIcons text-center">
+	                <div className="glyphicon glyphicon-heart icons btn" />
+	                <div className="glyphicon glyphicon-retweet icons btn" />
+	            </div>
+                <div className="logout btn">Log out</div>   
               </DropdownMenu>
           	</Dropdown>
 			<Link to="/upload" className="glyphicon glyphicon-plus btn upload"></Link>

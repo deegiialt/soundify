@@ -6,4 +6,3 @@ const musicSchema = new Schema({
   date: { type: Date, default: Date.now }
 });
 const Music = mongoose.model("Music", musicSchema);
-module.exports = Music;

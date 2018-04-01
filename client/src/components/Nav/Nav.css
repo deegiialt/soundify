@@ -92,3 +92,22 @@ body *, html * {
 	opacity: 0.5;
 	color: #cccccc;
 }
+
+.profileImage {
+	border-radius: 50%;
+	border: solid 3px;
+	height: 40px;
+	width: 40px;
+}
+
+.profileName {
+	padding: 10%;
+}
+
+.profileHeader {
+	padding: 5%;
+}
+
+.logout {
+	padding-left: 35%;
+}

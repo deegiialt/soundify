@@ -1,5 +1,6 @@
 import React from "react";
 import "./Upload.css";
+import API from "../../utils/API";
 
 class Upload extends React.Component {
 	state = {
@@ -13,16 +14,20 @@ class Upload extends React.Component {
 
 	componentDidMount() {
 		this.loadMusic();
-	}
+	};
 
 	loadMusic = () => {
-		
-	}
+		API.getUploads()
+		.then(res => 
+			this.setState({ albumCover: "", title: "", artist:"", file:"", tags:"", description:""})
+			)
+			.catch(err => console.log(err));
+	};
 
 	render() {
 		return(
 			<div>
-				<h1> Upload </h1>
+				<h1 className="uploadHeader"> Upload </h1>
 				<section class="contact-wrap">
 				  <form action="" class="contact-form">
 				    <div class="col-sm-6">
@@ -60,6 +65,9 @@ class Upload extends React.Component {
 				    </div>
 				  </form>
 				</section>
+				<div className="uploadAlbumArt">
+					<div className="btn uploadArtButton">Upload Image</div>
+				</div>
 			</div>			
 		)
 	}

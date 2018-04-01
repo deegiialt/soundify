@@ -13,7 +13,7 @@ const Player = props => (
 			    <p className="sub"> Example {props.sub} </p>
 			    <div className="run"></div>
 			    <div className="play"></div>
-			    <div className="playbtn"><a href="https://open.spotify.com/track/7H1wARAg328EuyIQxhVlXb" target="_blank"><img className="pause" src="https://www.dropbox.com/s/ozu8vunv3da8zfg/play%20btn.png?raw=1" /></a></div>
+			    <div className="playbtn"><a href="https://soundcloud.com/jaykode/shelter-jaykode-remix" target="_blank"><img className="pause" src="https://www.dropbox.com/s/ozu8vunv3da8zfg/play%20btn.png?raw=1" /></a></div>
 			    <div className="forward"><img className="ff" src="https://www.dropbox.com/s/sb2nkjffzkjmnqx/forward.png?raw=1" /></div>
 			    <div className="back"><img className="ff" src="https://www.dropbox.com/s/elkr56m7av551am/back.png?raw=1" /></div>
 			    <p className="time">2:31</p>
@@ -35,6 +35,7 @@ const Player = props => (
 			<ReactPlayer 
 				url="https://soundcloud.com/jaykode/shelter-jaykode-remix"
 				height="150px"
+				controls
 			/>
 		</div>
 	</div>

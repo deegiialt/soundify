@@ -101,7 +101,7 @@
   padding: 15px;
 }
 
-h1 {
+.uploadHeader {
   background-color: white;
   color: #ff7c62;
   padding: 40px;
@@ -111,35 +111,20 @@ h1 {
   font-weight: 700;
   text-align: center;
 }
-h1 small {
-  font-size: 18px;
-  display: block;
-  text-transform: none;
-  font-weight: 300;
-  margin-top: 10px;
-  color: #ff7c62;
+
+/*============================================*/
+/*Album art*/
+.uploadAlbumArt {
+  position: absolute;
+  border: solid 3px white;
+  height: 200px;
+  width: 200px;
 }
 
-.made-with-love {
-  margin-top: 40px;
-  padding: 10px;
-  clear: left;
-  text-align: center;
-  font-size: 10px;
-  font-family: arial;
-  color: #fff;
-}
-.made-with-love i {
-  font-style: normal;
-  color: #f50057;
-  font-size: 14px;
+.uploadArtButton {
   position: relative;
-  top: 2px;
-}
-.made-with-love a {
-  color: #fff;
-  text-decoration: none;
-}
-.made-with-love a:hover {
-  text-decoration: underline;
+  background: white;
+  width: 120px;
+  margin: 20%;
+  font-family: "Roboto";
 }
