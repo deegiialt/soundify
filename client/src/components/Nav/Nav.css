@@ -76,7 +76,6 @@ body *, html * {
 .profile-icon {
 	margin: auto;
 	color: white;
-	/*opacity: 1;*/
 	float: right;
 	font-size: 35px;
 	background: transparent;
@@ -114,7 +113,12 @@ body *, html * {
 	padding-left: 35%;
 }
 
+/*.dropdownMenu {
+	float: right;
+}*/
+
 /*.titleMain {
 	padding-left: 45%;
 	padding-top: 30%;
 }*/
+

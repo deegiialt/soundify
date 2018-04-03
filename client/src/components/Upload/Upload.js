@@ -28,6 +28,8 @@ class Upload extends React.Component {
 			}
 			)
 			.catch(err => console.log(err));
+
+		API.getUploads().then(res => {console.log(res.data)}).catch(err => console.log(err))
 	};
 
 	handleInputChange = event => {

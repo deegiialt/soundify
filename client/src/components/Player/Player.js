@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 const Player = props => (
 	<div>
-	{/*<div className="row">
+	<div className="row">
 		<div className="col-md-12">
 			<div className="player-container">
 			  <div className="square">
@@ -29,7 +29,8 @@ const Player = props => (
 
 			</div>
 		</div>
-	</div>*/}
+	</div>
+
 	<div className="row player-row">
 		<div className="col-md-2"></div>
 		<div className="col-md-8">

@@ -26,7 +26,7 @@ db.Music
  .then(() => db.Music.collection.insert(musicSeed))
  .then(data => {
    console.log(data)
-   console.log(data.insertedCount + " records inserted into Portfolio!");
+   console.log(data.insertedCount + " recorded!");
    process.exit(0);
  })
  .catch(err => {

@@ -2,7 +2,7 @@ import axios from "axios";
 export default {
   // Gets all uploads
   getUploads: function() {
-    return axios.get("/api/uploads");
+    return axios.get("/api/music/uploads");
   },
   // Gets the upload with the given id
   getUpload: function(id) {
@@ -14,6 +14,6 @@ export default {
   },
   // Saves a upload to the database
   saveUpload: function(uploadData) {
-    return axios.post("https:localhost:3001/api/uploads", uploadData);
+    return axios.post("https:localhost:3001/api/music/uploads", uploadData);
   }
 };

@@ -3,7 +3,7 @@ const musicController = require("../../controllers/musicController");
 
 router.route("/")
   .get(musicController.findAll)
-  .post(musicController.create);
+  // .post(musicController.create);
 
 router
   .route("/upload")
