@@ -5,8 +5,26 @@ import Player from "./components/Player";
 import Upload from "./components/Upload";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+// import dbConfig from'./db.js';
+// import mongoose from 'mongoose';
+
+// mongoose.connect(dbConfig.url);
+// var passport = require('passport');
+// var expressSession = require('express-session');
+// app.use(expressSession({secret: 'mySecretKey'}));
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// passport.serializeUser(function(user, done) {
+//   done(null, user._id);
+// });
+ 
+// passport.deserializeUser(function(id, done) {
+//   User.findById(id, function(err, user) {
+//     done(err, user);
+//   });
+// });
 
 class App extends Component {
   render() {

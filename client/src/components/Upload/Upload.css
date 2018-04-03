@@ -128,3 +128,12 @@
   margin: 20%;
   font-family: "Roboto";
 }
+
+.glyphicon-paperclip {
+  color: white;
+}
+
+.imageFile {
+  display: none;
+  color: transparent;
+}

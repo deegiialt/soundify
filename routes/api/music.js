@@ -6,8 +6,6 @@ router.route("/")
   .post(musicController.create);
 
 router
-  .route("/:id")
-  .get(booksController.findById)
-  .put(booksController.update)
-  .delete(booksController.remove);
+  .route("/upload")
+  .post(musicController.create)
 module.exports = router;

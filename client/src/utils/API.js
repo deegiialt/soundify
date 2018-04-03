@@ -4,10 +4,10 @@ export default {
   getUploads: function() {
     return axios.get("/api/uploads");
   },
-  // // Gets the upload with the given id
-  // getUpload: function(id) {
-  //   return axios.get("/api/uploads/" + id);
-  // },
+  // Gets the upload with the given id
+  getUpload: function(id) {
+    return axios.get("/api/uploads/" + id);
+  },
   // Deletes the upload with the given id
   deleteUpload: function(id) {
     return axios.delete("/api/uploads/" + id);

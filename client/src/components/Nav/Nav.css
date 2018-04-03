@@ -74,6 +74,7 @@ body *, html * {
 /*Profile*/
 /*===================================================================*/
 .profile-icon {
+	margin: auto;
 	color: white;
 	/*opacity: 1;*/
 	float: right;
@@ -91,6 +92,7 @@ body *, html * {
 	cursor: crosshair;
 	opacity: 0.5;
 	color: #cccccc;
+	background: transparent;
 }
 
 .profileImage {
@@ -111,3 +113,8 @@ body *, html * {
 .logout {
 	padding-left: 35%;
 }
+
+/*.titleMain {
+	padding-left: 45%;
+	padding-top: 30%;
+}*/
