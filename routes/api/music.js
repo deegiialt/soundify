@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const musicController = require("../../controller/musicController");
+const musicController = require("../../controllers/musicController");
 
 router.route("/")
   .get(musicController.findAll)
