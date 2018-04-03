@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 const Player = props => (
 	<div>
-	<div className="row">
+	{/*<div className="row">
 		<div className="col-md-12">
 			<div className="player-container">
 			  <div className="square">
@@ -29,15 +29,41 @@ const Player = props => (
 
 			</div>
 		</div>
-	</div>
-	<div className="row soundcloud-row">
+	</div>*/}
+	<div className="row player-row">
 		<div className="col-md-2"></div>
 		<div className="col-md-8">
 			<ReactPlayer 
+				className="player"
 				url="https://soundcloud.com/jaykode/shelter-jaykode-remix"
+				config={{
+					soundcloud: {
+						options: {
+							sharing: "true"
+						}
+					}
+				}}
 				height="150px"
 				width="800px"
-				controls
+			/>
+			<ReactPlayer 
+				className="player"
+				url="https://www.mixcloud.com/sergey223/ekali-the-lab-smirnoffhouse-mixmag-lab-03-aug-2016/"
+				height="150px"
+				width="800px"
+			/>
+			<ReactPlayer 
+				className="player"
+				url="https://soundcloud.com/manilakilla/manila-killa-live-holy-ship-2018-theatre-set"
+				config={{
+					soundcloud: {
+						options: {
+							sharing: "true"
+						}
+					}
+				}}
+				height="150px"
+				width="800px"
 			/>
 		</div>
 		<div className="col-md-2"></div>

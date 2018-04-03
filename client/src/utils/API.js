@@ -14,6 +14,6 @@ export default {
   },
   // Saves a upload to the database
   saveUpload: function(uploadData) {
-    return axios.post("/api/uploads", uploadData);
+    return axios.post("https:localhost:3001/api/uploads", uploadData);
   }
 };
