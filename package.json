@@ -1,9 +1,12 @@
 {
+  "homepage": "https://deegiialt.github.io/soundify",
   "name": "soundify",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
@@ -25,6 +28,7 @@
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
     "express-session": "^1.15.6",
+    "gh-pages": "^1.1.0",
     "mongoose": "^5.0.12",
     "passport": "^0.4.0",
     "passport-local": "~1.0.0"
