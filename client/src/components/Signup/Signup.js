@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Signup.css";
 import { Link } from "react-router-dom";
 import firebase from '../../firebase.js';
+import animate from "animate.css";
 
 let database = firebase.database();
 const auth = firebase.auth();
@@ -62,18 +63,18 @@ class Signup extends Component {
     		<h1 className="soundifySignup">SOUNDIFY</h1>
 			<form className="signupForm" method="post" action="/main">
 				<label>
-					<input type="text" id="name" name="name" onChange={this.handleInputChange} value={this.state.name} required />
+					<input type="text" name="name" onChange={this.handleInputChange} value={this.state.name} required />
 					<div className="label-text">Name</div>
 				</label>
 				<label>
-					<input type="text" id="email" name="email" onChange={this.handleInputChange} value={this.state.email} required />
+					<input type="text" name="email" onChange={this.handleInputChange} value={this.state.email} required />
 					<div className="label-text">Email</div>
 				</label>
 				<label>
-			    	<input type="text" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
+			    	<input type="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 			    	<div className="label-text">Password</div>
 				</label>
-				<Link to="/main"><button className="signupSubmit" onClick={this.handleSignUpSubmit}>Submit</button></Link>
+				<button className="signupSubmit animate shake" onClick={this.handleSignUpSubmit}>Submit</button>
 				{/*<hr>
 				<p>Login with:</p>
 				<span>

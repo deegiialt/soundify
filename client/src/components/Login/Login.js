@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Login.css";
 import { Link } from "react-router-dom";
 import firebase from '../../firebase.js';
+import animate from "animate.css";
 
 let database = firebase.database();
 const auth = firebase.auth();
@@ -21,26 +22,27 @@ class Login extends Component {
 	 };
 
 	handleloginsubmit = event => {
- 	event.preventDefault();
+	 	event.preventDefault();
 
-    database.ref().push({
-      name: this.state.email,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
-    });
+	    database.ref().push({
+	      name: this.state.email,
+	      dateAdded: firebase.database.ServerValue.TIMESTAMP
+	    });
 
-    const promise = auth.signInWithEmailAndPassword(this.state.email, this.state.password);
-    promise.then(() => {
-      auth.onAuthStateChanged(firebaseUser => {
-          if (firebaseUser) {
-            console.log(firebaseUser);
-            window.location = "/main";
-          } else {
-            alert("Incorrect credentials");
-          }
-        })
-    }
-    )
-    promise.catch(error => console.log(error.message));
+	    const promise = auth.signInWithEmailAndPassword(this.state.email, this.state.password);
+	    promise.then(() => {
+	      auth.onAuthStateChanged(firebaseUser => {
+	          if (firebaseUser) {
+	            console.log(firebaseUser);
+	            window.location = "/main";	          
+	          } else {
+	            alert("Incorrect credentials");
+	          }
+
+	        })
+	    }
+	    )
+	    promise.catch(error => console.log(error.message));
 	}
 
   render() {
@@ -74,10 +76,10 @@ class Login extends Component {
 						<div className="label-text">Username</div>
 					</label>
 					<label>
-				    	<input type="text" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
+				    	<input type="password" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 				    	<div className="label-text">Password</div>
 					</label>
-					<button className="loginSubmit" onClick={this.handleloginsubmit}>Submit</button>
+					<button className="loginSubmit animate bounceIn" onClick={this.handleloginsubmit}>Submit</button>
 					{/*<hr>
 					<p>Login with:</p>
 					<span>
