@@ -2,14 +2,14 @@
 /*Search*/
 /*===================================================================*/
 
-body *, html * {
+/*body *, html * {
   box-sizing: border-box;
-}
+}*/
 
 .search-container {
   position: absolute;
-  left: 10%;
-  top: 2%;
+/*  left: 8%;*/
+  top: 30%;
   transform: translate(-20%);
 }
 
@@ -76,7 +76,8 @@ body *, html * {
 .profile-icon {
 	margin: auto;
 	color: white;
-	float: right;
+	/*opacity: 1;*/
+/*	float: right;*/
 	font-size: 35px;
 	background: transparent;
 }
@@ -84,7 +85,7 @@ body *, html * {
 .upload {
 	color: white;
 	font-size: 35px;
-	float: right;
+/*	float: right;*/
 }
 
 .profile-icon:hover, .upload:hover {
@@ -113,12 +114,6 @@ body *, html * {
 	padding-left: 35%;
 }
 
-/*.dropdownMenu {
+.buttonsContainer {
 	float: right;
-}*/
-
-/*.titleMain {
-	padding-left: 45%;
-	padding-top: 30%;
-}*/
-
+}

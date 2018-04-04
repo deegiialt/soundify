@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import { Dropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
@@ -21,17 +21,19 @@ class Nav extends React.Component {
 
 	render() {
 		return(
-		<div>
+		<div className="row">
+		<div className="col-md-12">
 			<div className="search-container">
 				<div className="search-box">
 					<input type="text" />
 					<span></span>
 				</div>
 			</div>
-			<Link to="/upload" className="glyphicon glyphicon-plus btn upload"></Link>
-			<Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-            <DropdownToggle className="profile-icon btn glyphicon glyphicon-user" />
-              <DropdownMenu>
+
+			<div className="buttonsContainer"><Link to="/upload" className="glyphicon glyphicon-plus btn upload"></Link>
+			<ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+            <DropdownToggle className="profile-icon glyphicon glyphicon-user dropdownToggle" />
+              <DropdownMenu className="dropdownMenu">
               	<div className="profileHeader">
 	                <img className="profileImage" alt="profileImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYWrNxlCkqHlLvtG1qSB2BxktAOIeoU3HY1Mv7Ku5HAZgWwe5Zg"/>
 	                <span className="profileName">Name</span>
@@ -42,8 +44,10 @@ class Nav extends React.Component {
 	            </div>
                 <div className="logout text-center btn">Log out</div>   
               </DropdownMenu>
-          	</Dropdown>
+          	</ButtonDropdown>
 			
+			</div>
+		</div>
 		</div>
 		)
 	}
