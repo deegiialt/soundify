@@ -1,30 +1,79 @@
 import React, { Component } from 'react';
 import "./Signup.css";
 import { Link } from "react-router-dom";
+import firebase from '../../firebase.js';
+
+let database = firebase.database();
+const auth = firebase.auth();
 
 class Signup extends Component {
+	state = {
+		name: "",
+		email:"",
+		password: ""
+	};
+
+	handleInputChange = event => {
+	   const { name, value } = event.target;
+	   this.setState({
+	     [name]: value
+	   });
+
+	 };
+  
+  handleSignUpSubmit = event => {
+    console.log("signup worked");
+    event.preventDefault();
+
+    database.ref().push({
+      name: this.state.name,
+      dateAdded: firebase.database.ServerValue.TIMESTAMP
+    });
+
+    if (this.state.name.length < 0) {
+      alert("Please enter your name");
+      return;
+    }
+    else if (this.state.password.length < 5) {
+      alert("Please enter a valid password");
+      return;
+    } else if (!this.state.email) {
+      console.log("email invalid");
+    }
+    const promise =  auth.createUserWithEmailAndPassword(this.state.email, this.state.password);
+    promise.then(() => {
+      auth.onAuthStateChanged(firebaseUser => {
+          if (firebaseUser) {
+            //console.log(firebaseUser);
+            window.location = "/main";
+          } else {
+            console.log("not logged in");
+          }
+        })
+    })
+    promise.catch(error => console.log(error.message));
+
+    this.PostUserCredentials();
+  }
+
   render() {
     return (
     	<div classNameName="container">
     		<h1 className="soundifySignup">SOUNDIFY</h1>
 			<form className="signupForm" method="post" action="/main">
 				<label>
-					<input type="text" id="name" name="userName" required />
+					<input type="text" id="name" name="name" onChange={this.handleInputChange} value={this.state.name} required />
 					<div className="label-text">Name</div>
 				</label>
 				<label>
-					<input type="text" id="email" name="userName" required />
+					<input type="text" id="email" name="email" onChange={this.handleInputChange} value={this.state.email} required />
 					<div className="label-text">Email</div>
 				</label>
 				<label>
-					<input type="text" id="userName" name="userName" required />
-					<div className="label-text">Username</div>
-				</label>
-				<label>
-			    	<input type="text" id="password" name="password" required />
+			    	<input type="text" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 			    	<div className="label-text">Password</div>
 				</label>
-				<Link to="/main"><button className="signupSubmit">Submit</button></Link>
+				<Link to="/main"><button className="signupSubmit" onClick={this.handleSignUpSubmit}>Submit</button></Link>
 				{/*<hr>
 				<p>Login with:</p>
 				<span>

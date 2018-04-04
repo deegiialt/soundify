@@ -16,6 +16,7 @@ module.exports = {
   },
   create: function(req, res) {
         console.log(req.body)
+        console.log("test")
     db.Music
       .create(req.body)
       .then(dbModel => res.json(dbModel))

@@ -1,8 +1,48 @@
 import React, { Component } from 'react';
 import "./Login.css";
 import { Link } from "react-router-dom";
+import firebase from '../../firebase.js';
+
+let database = firebase.database();
+const auth = firebase.auth();
 
 class Login extends Component {
+	state = {
+		email: "",
+		password: ""
+	};
+
+	handleInputChange = event => {
+	   const { name, value } = event.target;
+	   this.setState({
+	     [name]: value
+	   });
+
+	 };
+
+	handleloginsubmit = event => {
+ 	event.preventDefault();
+
+    database.ref().push({
+      name: this.state.email,
+      dateAdded: firebase.database.ServerValue.TIMESTAMP
+    });
+
+    const promise = auth.signInWithEmailAndPassword(this.state.email, this.state.password);
+    promise.then(() => {
+      auth.onAuthStateChanged(firebaseUser => {
+          if (firebaseUser) {
+            console.log(firebaseUser);
+            window.location = "/main";
+          } else {
+            console.log("not logged in");
+          }
+        })
+    }
+    )
+    promise.catch(error => console.log(error.message));
+	}
+
   render() {
     return (
     	<div classNameName="container">
@@ -30,14 +70,14 @@ class Login extends Component {
     			<div className="col-md-4"></div>
 				<form className="loginForm col-md-4">
 					<label>
-						<input type="text" id="userName" name="userName" required />
+						<input type="text" id="userName" name="email" onChange={this.handleInputChange} value={this.state.email} required />
 						<div className="label-text">Username</div>
 					</label>
 					<label>
-				    	<input type="text" id="password" name="password" required />
+				    	<input type="text" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 				    	<div className="label-text">Password</div>
 					</label>
-					<Link to="/main"><button className="loginSubmit">Submit</button></Link>
+					<Link to="/main"><button className="loginSubmit" onClick={this.handleloginsubmit}>Submit</button></Link>
 					{/*<hr>
 					<p>Login with:</p>
 					<span>
