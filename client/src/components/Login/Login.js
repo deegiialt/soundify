@@ -35,7 +35,7 @@ class Login extends Component {
             console.log(firebaseUser);
             window.location = "/main";
           } else {
-            console.log("not logged in");
+            alert("Incorrect credentials");
           }
         })
     }
