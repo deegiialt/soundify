@@ -100,6 +100,7 @@
 	border: solid 3px;
 	height: 40px;
 	width: 40px;
+	margin-left: 40%;
 }
 
 .profileName {
@@ -123,4 +124,9 @@
 	color: white;
 	letter-spacing: 4px;
 	/*padding-top: 20px;*/
+}
+
+
+.dropdown-menu {
+	width: 200px;
 }
