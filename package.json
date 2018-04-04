@@ -1,12 +1,9 @@
 {
-  "homepage": "https://deegiialt.github.io/soundify",
   "name": "soundify",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
