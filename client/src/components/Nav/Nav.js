@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Link } from "react-router-dom";
 import animate from "animate.css";
 import firebase from '../../firebase.js';
@@ -14,7 +14,6 @@ class Nav extends React.Component {
       if (user) {
         console.log(user);
         this.setState({ user, email:user.email});
-        this.getUsersName();
       } else {
         window.location = "/";
       }

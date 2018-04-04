@@ -85,7 +85,7 @@
 .upload {
 	color: white;
 	font-size: 35px;
-/*	float: right;*/
+	/*float: left;*/
 }
 
 .profile-icon:hover, .upload:hover {
@@ -117,6 +117,7 @@
 
 .buttonsContainer {
 	float: right;
+	color: #fe5032;
 }
 
 .websiteTitle {
