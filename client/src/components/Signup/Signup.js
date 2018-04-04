@@ -74,7 +74,7 @@ class Signup extends Component {
 			    	<input type="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 			    	<div className="label-text">Password</div>
 				</label>
-				<button className="signupSubmit animate shake" onClick={this.handleSignUpSubmit}>Submit</button>
+				<button className="signupSubmit animate bounceIn" onClick={this.handleSignUpSubmit}>Submit</button>
 				{/*<hr>
 				<p>Login with:</p>
 				<span>

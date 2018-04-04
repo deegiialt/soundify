@@ -5,7 +5,8 @@ import ReactPlayer from 'react-player';
 const Player = props => (
 	<div>
 	<div className="row">
-		<div className="col-md-12">
+		<div className="col-md-2"></div>
+		<div className="col-md-8">
 			<div className="player-container">
 			  <div className="square">
 				<img className="cd" src="https://www.dropbox.com/s/q79oj13hkztaoj2/cd.png?raw=1" alt="cdimage" /> 

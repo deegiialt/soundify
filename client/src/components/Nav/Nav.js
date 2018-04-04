@@ -2,6 +2,7 @@ import React from "react";
 import "./Nav.css";
 import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 import { Link } from "react-router-dom";
+import animate from "animate.css";
 
 class Nav extends React.Component {
 	constructor(props) {
@@ -47,6 +48,7 @@ class Nav extends React.Component {
           	</ButtonDropdown>
 			
 			</div>
+			<div className="text-center websiteTitle animate rollIn">SOUNDIFY</div>
 		</div>
 		</div>
 		)

@@ -117,3 +117,10 @@
 .buttonsContainer {
 	float: right;
 }
+
+.websiteTitle {
+	font-size: 60px;
+	color: white;
+	letter-spacing: 4px;
+	/*padding-top: 20px;*/
+}
