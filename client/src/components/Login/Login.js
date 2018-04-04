@@ -77,7 +77,7 @@ class Login extends Component {
 				    	<input type="text" id="password" name="password" onChange={this.handleInputChange} value={this.state.password} required />
 				    	<div className="label-text">Password</div>
 					</label>
-					<Link to="/main"><button className="loginSubmit" onClick={this.handleloginsubmit}>Submit</button></Link>
+					<button className="loginSubmit" onClick={this.handleloginsubmit}>Submit</button>
 					{/*<hr>
 					<p>Login with:</p>
 					<span>
