@@ -1,11 +1,11 @@
 import React from "react";
 import "./Nav.css";
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 import { Link } from "react-router-dom";
 import animate from "animate.css";
 import firebase from '../../firebase.js';
 
-let database = firebase.database();
+// let database = firebase.database();
 const auth = firebase.auth();
 
 class Nav extends React.Component {
@@ -51,7 +51,7 @@ class Nav extends React.Component {
 	render() {
 		return(
 		<div className="row">
-		<div className="col-md-12">
+		<div className="col-md-12 navColumn">
 			<div className="search-container">
 				<div className="search-box">
 					<input type="text" />

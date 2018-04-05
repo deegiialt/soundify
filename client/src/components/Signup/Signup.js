@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Signup.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import firebase from '../../firebase.js';
 import animate from "animate.css";
 

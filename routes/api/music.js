@@ -16,13 +16,13 @@ var app = express()
 //   .get(musicController.create)
 // module.exports = router;
 
-router.get("/upload/api", function(req, res) {
-	res.send("about birds")
-})
+// router.get("/upload/api", function(req, res) {
+// 	res.send("about birds")
+// })
 
-router.get("/", function(req, res) {
-	res.send("about birds")
-})
+// router.get("/", function(req, res) {
+// 	res.send("about birds")
+// })
 
 // app.get('/upload/api', function (req, res) {
 //   res.send('GET request to the homepage')
