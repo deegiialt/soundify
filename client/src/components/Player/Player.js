@@ -38,6 +38,7 @@ class Player extends React.Component {
 					className="music-card"
 					ref="musicCard">
 					  <ReactPlayer 
+					  	key={music.id}
 					  	className="reactPlayerDisplay" 
 					  	url={music.url} 
 					  	playing={this.state.play} 
