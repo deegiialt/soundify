@@ -10,18 +10,20 @@ class Player extends React.Component {
 	state = {
 		music,
 		play: "",
-		// id: ""
+		activeid:""
 	};
 
-	handlePlay = event => {
-		event.preventDefault();
+	handlePlay = (id) => {
+		// event.preventDefault();
+		this.setState({activeid: id})
+		this.refs.musicCard.classList.add("playing")
 		this.setState({play: true})
-		// this.setState({id: music.id})
 	}
 
-	handlePause = (event) => {
-		event.preventDefault();
+	handlePause = id => {
+		// event.preventDefault();
 		this.setState({play: false})
+		this.refs.musicCard.classList.remove("playing")
 	}
 
 	render() {
@@ -30,8 +32,17 @@ class Player extends React.Component {
 				<div >
 					<ul className="musicPlayers">
 					{this.state.music.map(music => (
-					<li className={this.state.play === true ? "music-card playing" : "music-card"} key={music.id} ref="musicCard">
-					  <ReactPlayer className="reactPlayerDisplay" key={music.id} url={music.url} playing={this.state.play}></ReactPlayer>
+					<li 
+					id="test" 
+					key={music.id} 
+					className="music-card"
+					ref="musicCard">
+					  <ReactPlayer 
+					  	className="reactPlayerDisplay" 
+					  	url={music.url} 
+					  	playing={this.state.play} 
+					  	>
+					  </ReactPlayer>
 					  <div class='image' style= {{backgroundImage: 'url(' + music.image +')'}}></div>
 					  
 					  <div class='wave'></div>
@@ -43,8 +54,8 @@ class Player extends React.Component {
 					    <div class='artist'>{music.artist}</div>
 					  </div>
 					  
-					  <i class="fa fa-pause trigger" ref="fa-pause" onClick={this.handlePause}></i>
-					  <i class="fa fa-play trigger" onClick={this.handlePlay}></i>
+					  <i class="fa fa-pause trigger" ref="fa-pause" id={music.id} onClick={() => this.handlePause(music.id)}></i>
+					  <i class="fa fa-play trigger" onClick={ () => this.handlePlay(music.id)}></i>
 					</li>
 					))}
 					</ul>
