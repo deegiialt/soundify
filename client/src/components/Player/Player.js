@@ -16,14 +16,14 @@ class Player extends React.Component {
 	handlePlay = (id) => {
 		// event.preventDefault();
 		this.setState({activeid: id})
-		this.refs.musicCard.classList.add("playing")
+		this.refs[`musicCard${id}`].classList.add("playing")
 		this.setState({play: true})
 	}
 
 	handlePause = id => {
 		// event.preventDefault();
 		this.setState({play: false})
-		this.refs.musicCard.classList.remove("playing")
+		this.refs[`musicCard${id}`].classList.remove("playing")
 	}
 
 	render() {
@@ -36,12 +36,12 @@ class Player extends React.Component {
 					id="test" 
 					key={music.id} 
 					className="music-card"
-					ref="musicCard">
+					ref={`musicCard${music.id}`}>
 					  <ReactPlayer 
 					  	key={music.id}
 					  	className="reactPlayerDisplay" 
 					  	url={music.url} 
-					  	playing={this.state.play} 
+					  	playing={this.state.play && this.state.activeid === music.id} 
 					  	>
 					  </ReactPlayer>
 					  <div class='image' style= {{backgroundImage: 'url(' + music.image +')'}}></div>
