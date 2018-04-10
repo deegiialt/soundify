@@ -2,7 +2,7 @@
 > A music streaming service that's somewhere between Spotify and Soundcloud.
 
 ## Technology used
-ReactJS, Node.js, Javascript, Firebase, Mongoose, MongoDB, Express.js, Heroku deployment
+ReactJS, Node.js, Javascript, Firebase, Mongoose, MongoDB, Express.js, ReactPlayer, Heroku deployment
 
 ## How to use
 1. Create account or use guest login credentials
