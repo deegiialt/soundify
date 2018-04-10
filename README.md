@@ -10,5 +10,5 @@ ReactJS, Node.js, Javascript, Firebase, Mongoose, MongoDB, Express.js, Heroku de
 
 ## Guest Login
 Test out site with our guest login.
-###Username: guest@guest.com
-###Password: password
+### Username: guest@guest.com
+### Password: password
