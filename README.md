@@ -9,6 +9,6 @@ ReactJS, Node.js, Javascript, Firebase, Mongoose, MongoDB, Express.js, Heroku de
 2. Click play button to play music, press pause to pause.
 
 ## Guest Login
-> Test out site with our guest login.
+Test out site with our guest login.
 ###Username: guest@guest.com
 ###Password: password
