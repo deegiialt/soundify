@@ -1,5 +1,6 @@
 # Soundify
 > A music streaming service that's somewhere between Spotify and Soundcloud.
+> https://soundifymusic.herokuapp.com/
 
 ## Technology used
 ReactJS, Node.js, Javascript, Firebase, Mongoose, MongoDB, Express.js, ReactPlayer, Heroku deployment
